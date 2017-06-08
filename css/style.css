@@ -1,0 +1,427 @@
+@font-face
+{ 
+    font-family: 'BerkShire';
+    src: url('../font/berkshireswash-regular.ttf'), url('../font/berkshireswash-regular.ttf') format('truetype');
+}
+body
+{
+    background-color: rgb(220, 220, 220);
+}
+#main
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    margin: auto;
+    width: 350px;
+    height: 505px;
+    background-color: white;
+    box-shadow: 5px 5px 10px darkgray;
+}
+#upper_line
+{
+    background-color: rgb(255, 165, 0);
+    width: 100%;
+    height: 5px;
+}
+#header
+{
+    background-image: url('../images/orange-bg.jpg');
+    height: 100px;
+}
+#opacBox
+{
+    width: 100%;
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+h1
+{
+    display: inline-block;
+    color: orange;
+    margin-top: 13px;
+    font-size: 55px;
+    font-family: 'BerkShire';
+}
+#nav_bar
+{
+    height: 40px;
+    width: 90%;
+    margin: auto;
+}
+#line
+{
+    width: 100%;
+    background-image: -webkit-linear-gradient(right, transparent 0%, orange 5%, orange 95%, transparent 100%);
+    height: 2px;
+    clear: both;
+}
+#addItem
+{
+    display: none;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+#addItem a img
+{
+    margin-top: 7px;
+    width: 25px;
+    height: 25px;
+}
+#logout
+{
+    display: none;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+#logout a img
+{
+    margin-top: 8px;
+    width: 25px;
+    height: 25px;
+}
+#timeArea
+{
+    position: absolute;
+    right: 0;
+    left: 37.5px;
+
+    float: left;
+    width: 55%;
+    height: inherit;
+    text-align: center;
+    margin-left: 37.5px;
+}
+#viewList
+{
+    display: none;
+    float: right;
+    width: 60px;
+    height: 30px;
+    text-align: right;
+    margin-top: 8px;
+}
+#viewList a img
+{
+    padding-right: 7px;
+    width: 25px;
+    height: 23px;
+}
+#trashImg
+{
+    display: none;
+    float: right;
+    width: 60px;
+    height: 30px;
+    text-align: right;
+    margin-top: 7px;
+}
+#trashImg a img
+{
+    padding-right: 7px;
+    width: 25px;
+    height: 27px;
+}
+#listHead
+{
+    margin-top: 0;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+#timeToday
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: orange;
+}
+#sec
+{
+    font-size: 20px;
+    margin-left: 5px;
+}
+#days
+{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#screen
+{
+    overflow: hidden;
+    background-image: url('../images/bg.jpg');   
+    height: 71%;
+}
+#opacBox2
+{ 
+    overflow: hidden;
+    width: 100%;
+    height: 359px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Pages CSS */
+
+#heading
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-weight: bold;
+}
+.userInputBox
+{
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 2px solid darkgrey;
+    padding-bottom: 2px;
+}
+.inputStyle
+{
+    background: transparent;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border: none;
+}
+.inputStyle:focus
+{
+    outline: none;
+}
+::-webkit-input-placeholder
+{
+    color: darkgray;
+}
+#sign_up
+{
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 110px;
+    height: 35px;
+    font-size: 16px;
+    text-align: center;
+}
+#sign_up:hover
+{
+    cursor: pointer;
+}
+#regis_page
+{
+    margin: auto;
+    width: 85%;
+    height: 356px;
+}
+#btn
+{
+    text-align: center;
+    width: 100%;
+}
+#sign_in_page
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background: none;
+    border: none;
+    margin-top: 40px;
+}
+#sign_in_page:hover
+{
+    cursor: pointer;
+}
+#reg_div
+{
+    /*display: none;*/
+    animation-name: example;
+    animation-duration: 2s;
+    animation-direction: ease-out;
+}
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#signIn_div
+{
+    display: none;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-direction: ease-out;
+}
+
+/* Add Work Div CSS */
+
+#addWork_div
+{
+    display: none;
+    height: 357px;
+    text-align: center;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-direction: ease-out;
+}
+#greet
+{
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+#greetName
+{
+    margin-top: 5px;
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#welcome
+{
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#addbtn
+{
+    width: 120px;
+    height: 35px;
+    color: white;
+    background: #ffb347;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+#label
+{
+    margin-top: 30px;
+}
+
+/* Work List Div CSS */
+
+#WorkList_div
+{
+    display: none;
+    height: 357px;
+    text-align: center;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-direction: ease-out;
+}
+#workList
+{
+    height: 285px;
+    overflow-y: scroll;
+    padding-left: 0;
+    list-style: none;
+}
+#bulletImage
+{
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: orange;
+}
+#bulletImage img
+{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+#edit
+{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    margin-top: 0px;
+}
+#edit img
+{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+#del
+{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    margin-top: 0px;
+}
+#del img
+{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+#innerText
+{
+    float: left;
+    margin-top: 2px;
+    margin-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: orange;
+}
+#opacbox3
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    margin-top: 1px;
+    background-color: rgba(255, 179, 71, 0.4);
+}
+#message
+{
+    color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 21px;
+}
+#message2
+{
+    display: none;
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+#delThis:hover
+{
+    cursor: pointer;
+}
+#editText:hover
+{
+    cursor: pointer;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The To Do App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body onload="startTime()">
+        
+        <div id="main">
+            
+            <div id="upper_line"></div>
+      
+                <div id="header">
+                    <div id="opacBox">
+                        <h1>To do App</h1>
+                    </div>
+                </div>
+  
+                <div id="nav_bar">
+
+                    <div id="addItem" title="Add More Work">
+                        <a href="#" onclick="showNav()" onmouseover="changeSymbol('symbol-3','images/plus.png')" onmouseout="previousSymbol('symbol-3','images/plus_bk.png')"><img src="images/plus_bk.png" id="symbol-3"></a>
+                    </div>
+
+                    <!-- Sign Out Button -->
+
+                    <div id="logout" title="Log Out">
+                        <a href="#" onclick="logOutBtn()" onmouseover="changeSymbol('symbol-1','images/logout.png')" onmouseout="previousSymbol('symbol-1','images/logout_bk.png')"><img src="images/logout_bk.png" id="symbol-1"></a>
+                    </div>
+
+                    <!-- Sign Out Button -->
+
+                    <div id="timeArea">
+                        <div id="timeToday"><span id="days"></span><span id="hrs"></span>:<span id="min"></span><span id="sec"></span></div>
+                    </div>
+
+                    <div id="viewList" title="Show List">
+                        <a href="#" onclick="showListPage()" onmouseover="changeSymbol('symbol-2','images/list.png')" onmouseout="previousSymbol('symbol-2','images/list_bk.png')"><img src="images/list_bk.png" id="symbol-2"></a>
+                    </div>
+
+                    <div id="trashImg" title="Clear All">
+                        <a href="#" onclick="delAll()" onmouseover="changeSymbol('symbol-4','images/trash.png')" onmouseout="previousSymbol('symbol-4','images/trash_bk.png')"><img src="images/trash_bk.png" id="symbol-4"></a>
+                    </div>
+
+                </div>
+
+                <div id="line"></div>
+                
+                <div id="screen">
+                    <div id="opacBox2">
+
+                        <div id="regis_page">
+
+                            <!-- Registration Form -->
+                            <div id="reg_div">
+
+                                <h3 id="heading">Sign Up</h3>
+
+                                <form method="post">
+
+                                <label for="userName">ENTER USERNAME</label>
+                                <br>
+                                <div class="userInputBox" onfocusout="hideBorderStyle(this)" id="getUserName">
+                                <input type="text" name="userName" id="userName" placeholder="Enter Here" class="inputStyle" onfocus="borderStyle('getUserName','userName')" onblur="this.placeholder = 'Enter Here'">
+                                </div>
+                                <br>
+                                <label for="userName">ENTER KEY</label>
+                                <br>
+                                <div class="userInputBox" onfocusout="hideBorderStyle(this)" id="getKey">
+                                <input type="password" name="key" id="key" placeholder="Enter Here" class="inputStyle" onfocus="borderStyle('getKey','key')" onblur="this.placeholder = 'Enter Here'">
+                                </div>
+
+                                <button id="sign_up" onclick="save()">REGISTER</button>
+
+                                </form>
+                                
+                                <div id="btn">
+                                    <button id="sign_in_page" onclick="showSignIn()">I already have an account</button>
+                                </div>
+
+                            </div>
+
+                            <!-- Sign In Form -->
+
+                            <div id="signIn_div">
+                                
+                                <h3 id="heading">Sign In</h3>
+
+                                <form method="post" action="javascript:void(0)" onsubmit="check()">
+
+                                <label for="userName">ENTER USERNAME</label>
+                                <br>
+                                <div class="userInputBox" onfocusout="hideBorderStyle(this)" id="getUserNameS">
+                                <input type="text" name="userName" id="userNameS" placeholder="Enter Here" class="inputStyle" onfocus="borderStyle('getUserNameS','userNameS')" onblur="this.placeholder = 'Enter Here'">
+                                </div>
+                                <br>
+                                <label for="userName">ENTER KEY</label>
+                                <br>
+                                <div class="userInputBox" onfocusout="hideBorderStyle(this)" id="getKeyS">
+                                <input type="password" name="key" id="keyS" placeholder="Enter Here" class="inputStyle" onfocus="borderStyle('getKeyS','keyS')" onblur="this.placeholder = 'Enter Here'">
+                                </div>
+
+                                <button id="sign_up" type="submit">SIGN IN</button>
+
+                                </form>
+
+                                <div id="btn">
+
+                                    <br><br>
+
+                                    <button id="sign_in_page" onclick="showRegForm()">I want create new account</button>
+
+                                </div>
+
+                            </div>
+
+                            
+                            <!-- Add Work User Input -->
+
+                            <div id="addWork_div">
+                                
+                                <h3 id="greet">Hello,</h3>
+                                <h2 id="greetName"></h2>
+                                <h2 id="welcome">Welcome to To Do App</h2>
+                                
+                                <form onsubmit="pushWork()" action="javascript:void(0)">
+                                    <div id="label">
+                                        <label for="workName">ENTER WORK TO DO BELOW</label>
+                                        <br>
+                                        <div class="userInputBox" onfocusout="hideBorderStyle(this)" id="workBox">
+                                        <input style="text-align: center" type="text" name="workName" id="getWork" placeholder="Enter Here" class="inputStyle" onfocus="borderStyle('workBox','getWork')" onblur="this.placeholder = 'Enter Here'">
+                                        </div>
+                                    </div>
+
+                                    <button id="addbtn" type="submit">Add to List</button>
+                                </form>
+                                
+                            </div>
+
+                            <!-- Work List -->
+
+                            <div id="WorkList_div">
+                                
+                                <h2 id="message">Here is the Work List</h2>
+                                <h3 id="message2">No Work To Do</h3>
+                                
+                                <div>
+                                    
+                                    <ul id="workList">
+                                    
+                                    </ul>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+        
+    </body>
+
+    <script src="js/app.js" ></script>
+</html>
