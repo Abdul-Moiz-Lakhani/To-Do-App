@@ -11,7 +11,7 @@ function startTime() {
     document.getElementById('sec').innerHTML = s;
     var t = setTimeout(startTime, 500);
 
-    var daysList = ["SUN","MON","TUE","WED","THURS","FRI","SAT"];
+    var daysList = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
     var k = today.getDay();
 
     document.getElementById("days").innerHTML = daysList[k];
@@ -114,7 +114,7 @@ function userSignIn()
 
         if(flag === true)
         {
-             alert("User Name or Key is Incorrect! \nOR You are not registered \n\nNote: To register click I want to register" );
+             alert("User Name or Key is Incorrect! \nOR You are not registered \n\nNote: To register click I want to to create new account." );
         }
     }
 }
