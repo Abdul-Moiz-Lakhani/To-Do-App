@@ -62,7 +62,7 @@
 
                                 <label for="userName">ENTER USERNAME</label>
                                 <br>
-                                <div class="userInputBox" onfocusout="hideBorderStyle(this)" id="getUserName">
+                                <div class="userInputBox" onfocusout="hideBorderStyle(this); checkValidity()" id="getUserName">
                                 <input type="text" name="userName" id="userName" placeholder="Enter Here" class="inputStyle" onfocus="borderStyle('getUserName','userName')" onblur="this.placeholder = 'Enter Here'">
                                 </div>
                                 <br>

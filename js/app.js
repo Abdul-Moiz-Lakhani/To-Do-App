@@ -50,20 +50,46 @@ var userName;
 var userKey;
 var userNameSignIn;
 var userKeySignIn;
+var flag2 = true;
+
+function checkValidity()
+{
+    for (var i = 0; i < localStorage.length; i++)
+    {
+        var x = localStorage.key(i);
+        var val = localStorage.getItem(x);
+
+        var uName = document.getElementById('userName').value;
+        var uKey = document.getElementById('key').value;
+
+        if (uName === val)
+        {
+            alert("This Username already exists. Please choose different.");
+            flag2 = false;  
+        }
+    }
+}
 
 function save()
 {
-    userName = document.getElementById('userName').value;
-    userKey = document.getElementById('key').value;
-
-    if(userName == "" || userKey == "")
+    if (flag2)
     {
-        alert("User Name or Key is missing...!");
+        userName = document.getElementById('userName').value;
+        userKey = document.getElementById('key').value;
+
+        if(userName == "" || userKey == "")
+        {
+            alert("User Name or Key is missing...!");
+        }
+        else
+        {
+            localStorage.setItem(userKey,userName);
+            alert("Congrats! You are successfully Registered");
+        }    
     }
     else
     {
-        localStorage.setItem(userKey,userName);
-        alert("Congrats! You are successfully Registered");
+        alert("Cannot register with this Username!");
     }
 }
 
